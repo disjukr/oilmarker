@@ -22,7 +22,8 @@
     "handjs": "^1.3.11",
     "jquery": "^2.1.4",
     "normalize.css": "^3.0.3",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "uuid": "^2.0.1"
   },
   "devDependencies": {
     "babel": "^5.8.3",

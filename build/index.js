@@ -45,7 +45,8 @@ let config = {
             'handjs',
             'jquery',
             'react',
-            'clipper-lib'
+            'clipper-lib',
+            'uuid'
         ]
     },
     output: {

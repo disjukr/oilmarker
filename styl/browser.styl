@@ -1,11 +1,35 @@
 @import '../node_modules/normalize.css/normalize.css';
 
+$comic-sans = Comic Sans, Comic Sans MS;
+
+$menu-bar-height = 30px;
+$menu-bar-color = #333;
+
 html, body {
     width: 100%;
     height: 100%;
 }
 
-#app {
+#app, #app > .app {
     width: 100%;
     height: 100%;
+}
+#app > .app {
+    font-family: $comic-sans;
+    > .menu-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $menu-bar-height;
+        background-color: $menu-bar-color;
+        color: ($menu-bar-color > gray) ? black : white;
+    }
+    > .workbench {
+        position: fixed;
+        top: $menu-bar-height;
+        width: 100%;
+        height: 'calc(100% - %s)' % $menu-bar-height;
+        background-color: white;
+    }
 }
