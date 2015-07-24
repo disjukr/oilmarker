@@ -41,7 +41,7 @@ class Layers {
         return this._layers[index];
     }
     [Symbol.iterator]() {
-        return this._layers[Symbol.iterator];
+        return this._layers[Symbol.iterator]();
     }
     toJSON() {
         return this._layers.concat();
