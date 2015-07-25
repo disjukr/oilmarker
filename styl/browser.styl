@@ -31,5 +31,16 @@ html, body {
         width: 100%;
         height: 'calc(100% - %s)' % $menu-bar-height;
         background-color: white;
+        > .layers {
+            position: absolute;
+            outline: 1px solid black;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            > .layer {
+                position: absolute;
+                overflow: visible;
+            }
+        }
     }
 }

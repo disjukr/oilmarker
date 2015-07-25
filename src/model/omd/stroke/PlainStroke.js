@@ -6,8 +6,9 @@ export default class PlainStroke extends Stroke {
     static type = 'plain';
     constructor(fill = PlainFill.black, width = 1) {
         super();
+        if (!(fill instanceof PlainFill)) throw new Error('fill must be PlainFill');
         this.fill = fill;
-        this.width = width;
+        this.width = width; // pixel unit
     }
     toJSON() {
         return Object.assign({}, super.toJSON(), {

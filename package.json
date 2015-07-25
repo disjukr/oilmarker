@@ -9,6 +9,10 @@
     "email": "jong@chan.moe",
     "url": "http://0xABCDEF.com/"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/disjukr/oilmarker.git"
+  },
   "scripts": {
     "build": "babel-node ./build",
     "clean": "babel-node ./build --clean",

@@ -6,6 +6,7 @@ export default class PlainFill extends Fill {
     static type = 'plain';
     constructor(fillColor = RGBA.black) {
         super();
+        if (!(fillColor instanceof RGBA)) throw new Error('fillColor must be RGBA');
         this.fillColor = fillColor;
     }
     toJSON() {

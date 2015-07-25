@@ -1,5 +1,12 @@
 import Color from './Color';
 
+function hex2(ff) {
+    let x = Math.round(ff);
+    return (x >= 255) ? 'ff' :
+           (x <= 0)   ? '00' :
+           (x < 16)   ? '0' + x.toString(16) : x.toString(16);
+}
+
 export default class RGBA extends Color {
     static type = 'rgba';
     constructor(r, g, b, a) {
@@ -8,6 +15,12 @@ export default class RGBA extends Color {
         this.g = g; // 0 ~ 255
         this.b = b; // 0 ~ 255
         this.a = a; // 0 ~ 255
+    }
+    get opacity() {
+        return this.a / 255;
+    }
+    get hex6() {
+        return `#${hex2(this.r)}${hex2(this.g)}${hex2(this.b)}`;
     }
     toJSON() {
         return Object.assign({}, super.toJSON(), {
