@@ -4,6 +4,15 @@ import OnePlainPolypaths from './OnePlainPolypaths';
 import OnePlainPolypathsModel from '../../../model/omd/layer/OnePlainPolypaths';
 
 export default class Layers extends React.Component {
+    down() {
+        console.log('down');
+    }
+    move() {
+        console.log('move');
+    }
+    up() {
+        console.log('up');
+    }
     render() {
         let {document} = this.props;
         let style = {
