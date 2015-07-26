@@ -1,9 +1,15 @@
 import uuid from 'uuid';
 
 export default class Layer {
-    constructor() {
+    constructor(name = '') {
         this.id = uuid.v4();
-        this.name = '';
+        this.name = name;
+    }
+    isPaintable() {
+        return false;
+    }
+    paint(brush) { // brush is vector shape
+        throw new Error('not allowed');
     }
     toJSON() {
         return {

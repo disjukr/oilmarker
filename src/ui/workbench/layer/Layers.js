@@ -1,7 +1,7 @@
 import React from 'react';
 
-import OnePlainShape from './OnePlainShape';
-import OnePlainShapeModel from '../../../model/omd/layer/OnePlainShape';
+import OnePlainPolypaths from './OnePlainPolypaths';
+import OnePlainPolypathsModel from '../../../model/omd/layer/OnePlainPolypaths';
 
 export default class Layers extends React.Component {
     render() {
@@ -20,6 +20,6 @@ export default class Layers extends React.Component {
 };
 
 function getRenderer(layerModel) {
-    if (layerModel instanceof OnePlainShapeModel) return OnePlainShape;
+    if (layerModel instanceof OnePlainPolypathsModel) return OnePlainPolypaths;
     throw new Error('unknown layer type');
 }

@@ -24,3 +24,4 @@ class None extends Fill {
 }
 
 Fill.TYPE[None.type] = None;
+Fill.none = new None();
