@@ -21,6 +21,9 @@ export default class PlainFill extends Fill {
         return newInstance;
     }
     static black = new PlainFill(RGBA.black);
+    static red = new PlainFill(RGBA.red);
+    static green = new PlainFill(RGBA.green);
+    static blue = new PlainFill(RGBA.blue);
 };
 
 Fill.TYPE[PlainFill.type] = PlainFill;

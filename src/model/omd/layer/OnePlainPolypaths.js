@@ -4,7 +4,7 @@ import Fill from '../fill/Fill';
 import PlainStroke from '../stroke/PlainStroke';
 import PlainFill from '../fill/PlainFill';
 
-import {clean, union} from 'util/clipper-util';
+import {union} from 'util/clipper-util';
 
 function toD(polypath) {
     if (polypath.length < 3) return '';
@@ -21,7 +21,7 @@ export default class OnePlainPolypaths extends Layer {
             throw new Error('stroke must be PlainStroke or None');
         if (!(fill instanceof PlainFill) && fill !== Fill.none)
             throw new Error('fill must be PlainFill or None');
-        this.polypaths = clean(polypaths);
+        this.polypaths = polypaths;
         this.stroke = stroke;
         this.fill = fill;
     }

@@ -16,16 +16,17 @@ export default class App extends React.Component {
         let omd = new Document();
         omd.width = 640;
         omd.height = 480;
-        let testLayer = new OnePlainPolypaths('레이어 1', new PlainStroke(PlainFill.black, 3), Fill.none);
-        let Circle = require('../model/omd/geom/Circle');
-        let Pill = require('../model/omd/geom/Pill');
-        let start = new Circle(100, 100, 30);
-        let end = new Circle(170, 200, 100);
-        let pill = new Pill(start, end);
-        testLayer.paint(pill);
+        let testLayer = new OnePlainPolypaths(
+            '테스트 레이어',
+            new PlainStroke(PlainFill.red, 3),
+            PlainFill.black
+        );
         omd.layers.pushLayer(testLayer);
+        let CircleBrush = require('../model/omd/tool/brush/CircleBrush');
         this.state = {
-            document: omd
+            omd: omd,
+            currentLayerId: testLayer.id,
+            currentTool: new CircleBrush(5)
         };
     }
     render() {

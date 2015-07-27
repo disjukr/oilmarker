@@ -43,5 +43,8 @@ export default class RGBA extends Color {
 
 RGBA.transparent = new RGBA(0, 0, 0, 0);
 RGBA.black = new RGBA(0, 0, 0, 255);
+RGBA.red = new RGBA(255, 0, 0, 255);
+RGBA.green = new RGBA(0, 255, 0, 255);
+RGBA.blue = new RGBA(0, 0, 255, 255);
 
 Color.TYPE[RGBA.type] = RGBA;

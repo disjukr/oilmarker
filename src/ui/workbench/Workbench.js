@@ -27,9 +27,8 @@ export default class Workbench extends React.Component {
     }
     render() {
         let {app} = this.props;
-        let {document} = app.state;
         return <div className="workbench">
-            <Layers ref="layers" document={document}/>
+            <Layers ref="layers" app={app}/>
         </div>;
     }
 };
